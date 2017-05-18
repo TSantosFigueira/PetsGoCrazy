@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     
 
     [Header ("Player Jump Settings")]
-    public string jumpAxis = "Jump";  //!< Reference to player's jump movement button 
+    public string jumpButton = "Jump";  //!< Reference to player's jump movement button 
     [Range(10, 100)]
     public int jumpForce = 20;      //!< How high should the player jump
     private Collider2D isGrounded;  //!< Whether or not the player is grounded
@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour {
     private float maximumX;         //!< Maximum X position player can go
     private float maximumY;         //!< Maximum Y position player can go
 
-    private bool jump;
+    private bool jump;              //!< Controls if the player is jumping or not
+    private bool isFacingRight = true;     //!< Controls if the player is moving to the right
 
     public SpriteRenderer sprite;
 
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         // Checks if player is grounded by drawing a circle around it and checking overlapping objects on ground layer
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.05f, groundLayer);
-        if (Input.GetButtonDown(jumpAxis) && isGrounded)
+        if (Input.GetButtonDown(jumpButton) && isGrounded)
             jump = true;
     }
 
@@ -53,6 +54,11 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector2 movement = new Vector2(horizontal, 0);
         gameObject.GetComponent<Rigidbody2D>().velocity = movement * movementSpeed;
+
+        if (horizontal > 0 && !isFacingRight)
+            FlipPlayer();
+        else if (horizontal < 0 && isFacingRight)
+            FlipPlayer();
 
 
         //transform.position.x = Mathf.Clamp(transform.position.x, -maximumX, maximumX);
@@ -67,5 +73,13 @@ public class PlayerMovement : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jump = false;
         }
+    }
+
+    private void FlipPlayer()
+    {
+        isFacingRight = !isFacingRight;
+        Vector2 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
