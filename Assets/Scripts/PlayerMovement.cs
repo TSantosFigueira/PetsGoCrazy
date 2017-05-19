@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour {
     private float maximumY;         //!< Maximum Y position player can go
 
     private bool jump;              //!< Controls if the player is jumping or not
-    private bool isFacingRight = true;     //!< Controls if the player is moving to the right
+    [HideInInspector]
+    public bool isFacingRight = true;     //!< Controls if the player is moving to the right
 
     public SpriteRenderer sprite;
 
@@ -59,9 +60,6 @@ public class PlayerMovement : MonoBehaviour {
             FlipPlayer();
         else if (horizontal < 0 && isFacingRight)
             FlipPlayer();
-
-
-        //transform.position.x = Mathf.Clamp(transform.position.x, -maximumX, maximumX);
 
         gameObject.GetComponent<Rigidbody2D>().position = new Vector3(Mathf.Clamp(gameObject.GetComponent<Rigidbody2D>().position.x,
                                                                        -maximumX, maximumX),

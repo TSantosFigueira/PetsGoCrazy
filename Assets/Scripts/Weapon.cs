@@ -5,22 +5,38 @@ using UnityEngine;
 //! Manages shooting
 public class Weapon : MonoBehaviour {
 
-    public string shootButton; //!< Reference to player's shoot button 
+    public string shootButton;     //!< Reference to player's shoot button 
+    public GameObject projectile;  //!< The bullet that will be shot from this weapon
 
-    public int projectileSpeed;
-    public int damage;
+    [Range(1, 20)]
+    public int damage;             //!< Bullet damage will cause to player and other objects
+    [Range(1, 20)]
+    public int velocity;           //!< Bullet velocity at start
 
-
+    [Range(1, 5)]
+    public float delayTime;        //<! Time between every shot
+    private float timer;           //<! Internal timer controller
 	
 	void Start () {
 		
 	}
 	
-	
 	void Update () {
-        if (Input.GetButtonDown(shootButton))
+        timer -= Time.deltaTime;
+
+        if (Input.GetButtonDown(shootButton) && timer <= 0f)
         {
-            // retrieve from bullets pool
+            timer = delayTime;
+            if (GetComponentInParent<PlayerMovement>().isFacingRight)
+            {
+                GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(Vector3.zero));
+                bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(velocity, 0), ForceMode2D.Impulse);
+            }
+            else
+            {
+                GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector2(0, 180)));
+                bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocity, 0), ForceMode2D.Impulse);
+            }
         }
 	}
 }
