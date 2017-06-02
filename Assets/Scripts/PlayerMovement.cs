@@ -35,14 +35,14 @@ public class PlayerMovement : MonoBehaviour {
                                                                             Camera.main.transform.position.y,
                                                                             Camera.main.transform.position.z));
 
-        maximumX = -cameraSize.x - sprite.size.x;
-        maximumY = -cameraSize.y - sprite.size.y;
+        maximumX = -cameraSize.x - (sprite.size.x / 2);
+        maximumY = -cameraSize.y - (sprite.size.y / 2);
     }
 
     void Update()
     {
         // Checks if player is grounded by drawing a circle around it and checking overlapping objects on ground layer
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.05f, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
         if (Input.GetButtonDown(jumpButton) && isGrounded)
             jump = true;
     }
