@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour {
     public EventSystem eventSystem;
     private GameObject selectedObject;
 
-	void Start ()
+	void OnEnable ()
     {
         selectedObject = eventSystem.firstSelectedGameObject;
 	}
