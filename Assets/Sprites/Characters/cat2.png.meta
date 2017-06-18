@@ -1,9 +1,26 @@
 fileFormatVersion: 2
 guid: ac83268acbcab4242a035ada7da729ac
-timeCreated: 1497805815
+timeCreated: 1497815853
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: cat2_0
+    21300002: cat2_1
+    21300004: cat2_2
+    21300006: cat2_3
+    21300008: cat2_4
+    21300010: cat2_5
+    21300012: cat2_6
+    21300014: cat2_7
+    21300016: cat2_8
+    21300018: cat2_9
+    21300020: cat2_10
+    21300022: cat2_11
+    21300024: cat2_12
+    21300026: cat2_13
+    21300028: cat2_14
+    21300030: cat2_15
+    21300032: cat2_16
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +51,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +75,254 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cat2_0
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 3116
+        width: 197
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_1
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 2468
+        width: 750
+        height: 926
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_2
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 3188
+        width: 294
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_3
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2954
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_4
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 2789
+        width: 445
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_5
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2746
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_6
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 2075
+        width: 335
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_7
+      rect:
+        serializedVersion: 2
+        x: 3213
+        y: 2598
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_8
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1714
+        width: 772
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_9
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 2169
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_10
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1771
+        width: 323
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_11
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 942
+        width: 1192
+        height: 1547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_12
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 2100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_13
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1894
+        width: 272
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_14
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1402
+        width: 259
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_15
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1338
+        width: 189
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cat2_16
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 721
+        width: 963
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

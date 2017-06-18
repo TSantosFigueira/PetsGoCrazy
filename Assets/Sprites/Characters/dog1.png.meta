@@ -1,9 +1,23 @@
 fileFormatVersion: 2
 guid: 0194c9fcb47798d4ba217120cf6a7116
-timeCreated: 1497805783
+timeCreated: 1497816155
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: dog1_0
+    21300002: dog1_1
+    21300004: dog1_2
+    21300006: dog1_3
+    21300008: dog1_4
+    21300010: dog1_5
+    21300012: dog1_6
+    21300014: dog1_7
+    21300016: dog1_8
+    21300018: dog1_9
+    21300020: dog1_10
+    21300022: dog1_11
+    21300024: dog1_12
+    21300026: dog1_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +48,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +72,215 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: dog1_0
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 3443
+        width: 362
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_1
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 3519
+        width: 396
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_2
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 3281
+        width: 512
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_3
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 2596
+        width: 902
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_4
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 2563
+        width: 386
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_5
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2509
+        width: 979
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_6
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1821
+        width: 813
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_7
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 2455
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_8
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 2054
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_9
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 1939
+        width: 371
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_10
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 286
+        width: 1248
+        height: 1862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1862
+        width: 273
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_12
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1263
+        width: 306
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dog1_13
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 1213
+        width: 218
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
