@@ -29,12 +29,12 @@ public class Weapon : MonoBehaviour {
             timer = delayTime;
             if (GetComponentInParent<PlayerMovement>().isFacingRight)
             {
-                GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(Vector3.zero));
+                GameObject bullet = Instantiate(projectile, transform.position + new Vector3(1, 0), Quaternion.Euler(Vector3.zero));
                 bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(velocity, 0), ForceMode2D.Impulse);
             }
             else
             {
-                GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector2(0, 180)));
+                GameObject bullet = Instantiate(projectile, transform.position + new Vector3(-1, 0), Quaternion.Euler(new Vector2(0, 180)));
                 bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(-velocity, 0), ForceMode2D.Impulse);
             }
         }

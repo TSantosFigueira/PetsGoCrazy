@@ -11,8 +11,10 @@ public class Bullet : MonoBehaviour {
 	void Start () {
         Destroy(gameObject, duration);
 	}
-	
-	void Update () {
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.gameObject.GetComponent<PlayerMovement>().Die();
         
     }
 }

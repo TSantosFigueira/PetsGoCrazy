@@ -62,7 +62,7 @@ public class CharacterSelection : MonoBehaviour
     {
         if (ready % players == 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(Random.Range(2, 3));
             ready = players = 0;
         }
     }

@@ -80,4 +80,27 @@ public class PlayerMovement : MonoBehaviour {
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
+        StartCoroutine("Respawn");
+    }
+
+    IEnumerator Respawn ()
+    {
+        yield return new WaitForSeconds(2);
+        if (gameObject.name.Contains("Dog"))
+        {
+            transform.position = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().dogSpawnPoint.position;
+            ScoreManager.catPoints += 100;
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            transform.position = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().catSpawnPoint.position;
+            ScoreManager.dogPoints += 100;
+            gameObject.SetActive(true);
+        }
+    }
 }
