@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour {
 
         if (Input.GetButtonDown(shootButton) && timer <= 0f)
         {
+            GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sounds>().playSound("Shoot", .5f);
             timer = delayTime;
             if (GetComponentInParent<PlayerMovement>().isFacingRight)
             {

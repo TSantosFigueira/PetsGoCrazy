@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour {
         if (jump)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sounds>().playSound("Jump", .5f);
             jump = false;
         }
     }
