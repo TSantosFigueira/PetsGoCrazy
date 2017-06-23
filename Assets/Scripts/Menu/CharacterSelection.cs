@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterSelection : MonoBehaviour
 {
     public string verticalAxis;
+    public string unblockAccess;
     public string AButton;
     public Image characterBoard;
     public bool isSelectPressed = false;
@@ -16,7 +17,7 @@ public class CharacterSelection : MonoBehaviour
     private float vertical;
     private bool canMove = true;
     private static int ready = 0;
-    private static int players = 1;
+    private static int players = 2;
 
     void Start()
     {
@@ -28,10 +29,16 @@ public class CharacterSelection : MonoBehaviour
 
         if (!isSelectPressed && canMove) //Se a pre-definição não determinar que está ativo, então deve aguardar ativação do jogador
         {
-            isSelectPressed = Input.GetButtonUp(AButton);
+            
+            isSelectPressed = Input.GetButtonDown(unblockAccess);
             StartCoroutine("Blink");
+
             if (isSelectPressed)
+            {
                 players += 1;
+                characterBoard.sprite = characters[0];
+            }
+                
         }
 
         if (isSelectPressed && canMove) //Se estiver ativo, permitir a mudança de sprites

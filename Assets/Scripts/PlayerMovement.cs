@@ -51,8 +51,7 @@ public class PlayerMovement : MonoBehaviour {
     {
 
         float horizontal = Input.GetAxis(horizontalAxis);
-        // float vertical = Input.GetAxis(verticalAxis);
-
+    
         Vector2 movement = new Vector2(horizontal, 0);
         gameObject.GetComponent<Rigidbody2D>().velocity = movement * movementSpeed;
 

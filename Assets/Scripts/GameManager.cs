@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour {
                 {
                     if( player == characterBoard[j].name)
                     {
-                        characters[j].GetComponent<PlayerMovement>().horizontalAxis = "Horizontal" + controllers[j];
-                        characters[j].GetComponent<PlayerMovement>().jumpButton = "Jump" + controllers[j];
-                        characters[j].GetComponent<Weapon>().shootButton = "Fire" + controllers[j];
+                        characters[j].GetComponent<PlayerMovement>().horizontalAxis = "Horizontal" + controllers[i - 1]; //como i começa em 1, para compensar
+                        characters[j].GetComponent<PlayerMovement>().jumpButton = "Jump" + controllers[i - 1];
+                        characters[j].GetComponent<Weapon>().shootButton = "Fire" + controllers[i - 1];
 
                         if (characters[j].name.Contains("Dog"))
                         {                     
@@ -39,10 +39,5 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
