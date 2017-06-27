@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AboutDisplayer : MonoBehaviour
@@ -20,6 +21,11 @@ public class AboutDisplayer : MonoBehaviour
         credits.SetActive(false);
         mainMenu.SetActive(true);
         StartCoroutine(DoFade(mainMenu));
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0); 
     }
 
     IEnumerator DoFade(GameObject canvas)

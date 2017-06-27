@@ -14,7 +14,17 @@ public class Bullet : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<PlayerMovement>().Die();
-        
+        if (Weapon.whoShot.Contains("Cat"))
+            if (collision.gameObject.name.Contains("Dog")) { 
+                collision.gameObject.GetComponent<PlayerMovement>().Die();
+                Destroy(this.gameObject);
+            } else{ Destroy(this.gameObject); }
+
+        if (Weapon.whoShot.Contains("Dog"))
+            if (collision.gameObject.name.Contains("Cat")) {
+                collision.gameObject.GetComponent<PlayerMovement>().Die();
+                Destroy(this.gameObject);
+            } else{ Destroy(this.gameObject); }
+
     }
 }

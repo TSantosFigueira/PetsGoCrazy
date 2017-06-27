@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     [Header ("Player Jump Settings")]
     public string jumpButton = "Jump";  //!< Reference to player's jump movement button 
-    [Range(10, 100)]
+    [Range(1, 100)]
     public int jumpForce = 20;      //!< How high should the player jump
     private Collider2D isGrounded;  //!< Whether or not the player is grounded
     public Transform groundCheck;    //!< A position marking where to check if the player is grounded
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     private float maximumX;         //!< Maximum X position player can go
     private float maximumY;         //!< Maximum Y position player can go
 
-    private bool jump;              //!< Controls if the player is jumping or not
+    //private bool jump;              //!< Controls if the player is jumping or not
     [HideInInspector]
     public bool isFacingRight = true;     //!< Controls if the player is moving to the right
 
@@ -43,17 +43,23 @@ public class PlayerMovement : MonoBehaviour {
     {
         // Checks if player is grounded by drawing a circle around it and checking overlapping objects on ground layer
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
-        if (Input.GetButtonDown(jumpButton) && isGrounded)
-            jump = true;
+        if (Input.GetButtonDown(jumpButton) && isGrounded) { 
+            StartCoroutine("Jump");
+        }
     }
 
     void FixedUpdate()
     {
+        if (this.GetComponent<Rigidbody2D>().velocity.x != 0) this.GetComponent<Animator>().SetBool("Walking", true);
+        else { this.GetComponent<Animator>().SetBool("Walking", false); }
+        print("velox y: " + this.GetComponent<Rigidbody2D>().velocity.y);
+        if(!this.isGrounded) this.GetComponent<Animator>().SetBool("Jumped", true);
+        else { this.GetComponent<Animator>().SetBool("Jumped", false); }
 
         float horizontal = Input.GetAxis(horizontalAxis);
     
-        Vector2 movement = new Vector2(horizontal, 0);
-        gameObject.GetComponent<Rigidbody2D>().velocity = movement * movementSpeed;
+        Vector2 movement = new Vector2(horizontal, this.GetComponent<Rigidbody2D>().velocity.y);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (movement.x * movementSpeed, this.GetComponent<Rigidbody2D>().velocity.y);
 
         if (horizontal > 0 && !isFacingRight)
             FlipPlayer();
@@ -65,12 +71,20 @@ public class PlayerMovement : MonoBehaviour {
 
                                                                       Mathf.Clamp(gameObject.GetComponent<Rigidbody2D>().position.y,
                                                                       -maximumY, maximumY), 0);
-        if (jump)
-        {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sounds>().playSound("Jump", .5f);
-            jump = false;
-        }
+    }
+    
+    IEnumerator Jump()
+    {
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sounds>().playSound("Jump", .5f);
+        this.GetComponent<Animator>().SetBool("Jumped", true);
+
+        yield return new WaitForSeconds(0.1f);
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GetComponent<Rigidbody2D>().gravityScale = 5;
+        //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -jumpForce), ForceMode2D.Impulse);
     }
 
     private void FlipPlayer()
@@ -83,24 +97,30 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Die()
     {
-        gameObject.SetActive(false);
         StartCoroutine("Respawn");
     }
 
     IEnumerator Respawn ()
     {
+        this.GetComponent<SpriteRenderer>().enabled = false;
+        this.GetComponent<BoxCollider2D>().enabled = false;
+
         yield return new WaitForSeconds(2);
         if (gameObject.name.Contains("Dog"))
         {
-            transform.position = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().dogSpawnPoint.position;
+            transform.position = GameObject.Find("GameManager").GetComponent<GameManager>().dogSpawnPoint.position;
             ScoreManager.catPoints += 100;
             gameObject.SetActive(true);
         }
         else
         {
-            transform.position = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().catSpawnPoint.position;
+            transform.position = GameObject.Find("GameManager").GetComponent<GameManager>().catSpawnPoint.position;
             ScoreManager.dogPoints += 100;
             gameObject.SetActive(true);
         }
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

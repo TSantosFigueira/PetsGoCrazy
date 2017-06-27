@@ -18,7 +18,7 @@ public class SandParallax : MonoBehaviour {
         GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r, GetComponent<SpriteRenderer>().color.g, GetComponent<SpriteRenderer>().color.b, 0);
         Vector3 gameBounds = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z));
 
-        resetDistance = -gameBounds.x;
+        resetDistance = -gameBounds.x + 11;
         initialPosition = transform.position;
         originalTime = time;
     }

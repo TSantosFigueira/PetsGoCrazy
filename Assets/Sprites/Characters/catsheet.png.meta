@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: 26b11ecc840e10b408ac3a8ac4bc0c68
+timeCreated: 1498241233
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: catsheet_0
+    21300002: catsheet_1
+    21300004: catsheet_2
+    21300006: catsheet_3
+    21300008: catsheet_4
+    21300010: catsheet_5
+    21300012: catsheet_6
+    21300014: catsheet_7
+    21300016: catsheet_8
+    21300018: catsheet_9
+    21300020: catsheet_10
+    21300022: catsheet_11
+    21300024: catsheet_12
+    21300026: catsheet_13
+    21300028: catsheet_14
+    21300030: catsheet_15
+    21300032: catsheet_16
+    21300034: catsheet_17
+    21300036: catsheet_18
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: catsheet_0
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 2322
+        width: 378
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 2333
+        width: 379
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_2
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2333
+        width: 380
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_3
+      rect:
+        serializedVersion: 2
+        x: 2250
+        y: 2346
+        width: 379
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_4
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1577
+        width: 378
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_5
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1562
+        width: 369
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_6
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1587
+        width: 374
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_7
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 1589
+        width: 377
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_8
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 816
+        width: 378
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_9
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 821
+        width: 382
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_10
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 847
+        width: 387
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_11
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 833
+        width: 384
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_12
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 824
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_13
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 829
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_14
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 817
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_15
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 88
+        width: 380
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_16
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 69
+        width: 393
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_17
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 69
+        width: 379
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: catsheet_18
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 88
+        width: 393
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

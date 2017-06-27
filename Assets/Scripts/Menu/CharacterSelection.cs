@@ -9,34 +9,41 @@ public class CharacterSelection : MonoBehaviour
     public string verticalAxis;
     public string unblockAccess;
     public string AButton;
+    public string startButton;
     public Image characterBoard;
     public bool isSelectPressed = false;
 
     public Sprite[] characters;
 
+    public Text startCountTxt;
+    public int startCount;
+
     private float vertical;
     private bool canMove = true;
-    private static int ready = 0;
-    private static int players = 2;
+    public bool canPlay = false;
 
-    void Start()
-    {
+    private static int ready = 0;
+    private static int players = 1;
+
+    void Start() {
         PlayerPrefs.SetString(gameObject.name, "null");
+        startCount = 3;
     }
 
-    void Update()
-    {
+    void Update() {
 
         if (!isSelectPressed && canMove) //Se a pre-definição não determinar que está ativo, então deve aguardar ativação do jogador
-        {
-            
-            isSelectPressed = Input.GetButtonDown(unblockAccess);
+        {    
             StartCoroutine("Blink");
 
-            if (isSelectPressed)
+            if (Input.GetButtonUp(unblockAccess))
             {
                 players += 1;
                 characterBoard.sprite = characters[0];
+                StopCoroutine("Blink");
+                this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g,
+                    this.GetComponent<Image>().color.b, 1f);
+                isSelectPressed = true;
             }
                 
         }
@@ -54,22 +61,32 @@ public class CharacterSelection : MonoBehaviour
             characterBoard.SetNativeSize();
         }
 
-        if (Input.GetButtonDown(AButton))
+        if (Input.GetButtonDown(AButton) && isSelectPressed && canMove)
         {
             canMove = false;
             characterBoard.color = new Color(characterBoard.color.r, characterBoard.color.g, characterBoard.color.b, 0.5f);
-            PlayerPrefs.SetString(gameObject.name, characters[0].name);
+            PlayerPrefs.SetString(gameObject.name, this.GetComponent<Image>().sprite.name);
             PlayerPrefs.Save();
             ready += 1;
             StartGame();
         }
     }
 
-    void StartGame()
-    {
-        if (ready % players == 0)
-        {
-            SceneManager.LoadScene(Random.Range(2, 3));
+    void StartGame() {
+        if (ready == 2 || ready == 4) {
+            InvokeRepeating("PlayGame", 1f, 1f); /*StartCoroutine("PlayGame");*/
+        }
+    }
+
+    void PlayGame() {
+        if(ready == 2 || ready == 4) {
+            startCountTxt.text = startCount.ToString();
+            print(startCount);
+            startCount -= 1;
+        }
+        else{ startCount = 3; startCountTxt.text = ""; }
+        if(startCount < 0) {
+            SceneManager.LoadScene(Random.Range(2, 4));
             ready = players = 0;
         }
     }

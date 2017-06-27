@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: dfa4c2eea87bb3049a7559a9179ed59a
+timeCreated: 1498246909
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dogsheet_0
+    21300002: dogsheet_1
+    21300004: dogsheet_2
+    21300006: dogsheet_3
+    21300008: dogsheet_4
+    21300010: dogsheet_5
+    21300012: dogsheet_6
+    21300014: dogsheet_7
+    21300016: dogsheet_8
+    21300018: dogsheet_9
+    21300020: dogsheet_10
+    21300022: dogsheet_11
+    21300024: dogsheet_12
+    21300026: dogsheet_13
+    21300028: dogsheet_14
+    21300030: dogsheet_15
+    21300032: dogsheet_16
+    21300034: dogsheet_17
+    21300036: dogsheet_18
+    21300038: dogsheet_19
+    21300040: dogsheet_20
+    21300042: dogsheet_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dogsheet_0
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 2322
+        width: 389
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2333
+        width: 386
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_2
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2333
+        width: 382
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_3
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 2689
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_4
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 2351
+        width: 387
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_5
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 2670
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_6
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1577
+        width: 390
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_7
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1563
+        width: 381
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_8
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 1587
+        width: 384
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_9
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 1587
+        width: 388
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 816
+        width: 390
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_11
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 823
+        width: 405
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_12
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1154
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_13
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 847
+        width: 414
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_14
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 830
+        width: 406
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_15
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 817
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_16
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 825
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_17
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 824
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_18
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 88
+        width: 403
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_19
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 69
+        width: 395
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_20
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 71
+        width: 402
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dogsheet_21
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 88
+        width: 395
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
