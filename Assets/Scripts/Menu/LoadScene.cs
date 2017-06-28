@@ -10,7 +10,8 @@ public class LoadScene : MonoBehaviour {
 
     public void goToScene()
     {
-        SceneManager.LoadScene(cenaParaCarregar);
+        StartCoroutine(FindObjectOfType<SceneFader>().FadeAndLoadScene(SceneFader.FadeDirection.Out, cenaParaCarregar));
+        //SceneManager.LoadScene(cenaParaCarregar);
     }
 
     public void goToMainMenu()
