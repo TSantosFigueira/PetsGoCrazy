@@ -10,7 +10,7 @@ public class LoadScene : MonoBehaviour {
 
     public void goToScene()
     {
-        StartCoroutine(FindObjectOfType<SceneFader>().FadeAndLoadScene(SceneFader.FadeDirection.Out, cenaParaCarregar));
+        Initiate.Fade(cenaParaCarregar, Color.white, 2);
         //SceneManager.LoadScene(cenaParaCarregar);
     }
 
