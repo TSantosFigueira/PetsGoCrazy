@@ -5,6 +5,8 @@ using UnityEngine;
 //! Manages geneneral player movement
 public class PlayerMovement : MonoBehaviour {
 
+    public int life;
+
     [Header("Player Movement Settings")]
     public string horizontalAxis = "Horizontal"; //!< Reference to player's horizontal axis movement
     [Range(1, 10)]
@@ -29,6 +31,10 @@ public class PlayerMovement : MonoBehaviour {
 
     public SpriteRenderer sprite;
 
+    [Header("Explosion assets")]
+    public GameObject bloodPrefab;
+    public GameObject bonesPrefab;
+
     void Start()
     {
         Vector3 cameraSize = Camera.main.ScreenToWorldPoint(new Vector3 (Camera.main.transform.position.x, 
@@ -48,8 +54,7 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         if (this.GetComponent<Rigidbody2D>().velocity.x != 0) this.GetComponent<Animator>().SetBool("Walking", true);
         else { this.GetComponent<Animator>().SetBool("Walking", false); }
         print("velox y: " + this.GetComponent<Rigidbody2D>().velocity.y);
@@ -71,6 +76,8 @@ public class PlayerMovement : MonoBehaviour {
 
                                                                       Mathf.Clamp(gameObject.GetComponent<Rigidbody2D>().position.y,
                                                                       -maximumY, maximumY), 0);
+
+        if (this.life <= 0) Die();
     }
     
     IEnumerator Jump()
@@ -80,7 +87,7 @@ public class PlayerMovement : MonoBehaviour {
         GameObject.FindGameObjectWithTag("SoundManager").GetComponent<Sounds>().playSound("Jump", .5f);
         this.GetComponent<Animator>().SetBool("Jumped", true);
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.25f);
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         GetComponent<Rigidbody2D>().gravityScale = 5;
@@ -100,20 +107,22 @@ public class PlayerMovement : MonoBehaviour {
         StartCoroutine("Respawn");
     }
 
-    IEnumerator Respawn ()
-    {
+    IEnumerator Respawn () {
         this.GetComponent<SpriteRenderer>().enabled = false;
         this.GetComponent<BoxCollider2D>().enabled = false;
+        this.GetComponent<Weapon>().enabled = false;
+        life = 2;
+
+        GameObject blood = Instantiate(bloodPrefab, new Vector3(this.transform.position.x, this.transform.position.y, -10), Quaternion.identity);
+        GameObject bones = Instantiate(bonesPrefab, new Vector3(this.transform.position.x, this.transform.position.y, -10), Quaternion.identity);
 
         yield return new WaitForSeconds(2);
-        if (gameObject.name.Contains("Dog"))
-        {
+        if (gameObject.name.Contains("Dog")) {
             transform.position = GameObject.Find("GameManager").GetComponent<GameManager>().dogSpawnPoint.position;
             ScoreManager.catPoints += 100;
             gameObject.SetActive(true);
         }
-        else
-        {
+        else {
             transform.position = GameObject.Find("GameManager").GetComponent<GameManager>().catSpawnPoint.position;
             ScoreManager.dogPoints += 100;
             gameObject.SetActive(true);
@@ -122,5 +131,8 @@ public class PlayerMovement : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         this.GetComponent<SpriteRenderer>().enabled = true;
         this.GetComponent<BoxCollider2D>().enabled = true;
+        this.GetComponent<Weapon>().enabled = true;
+        Destroy(blood.gameObject);
+        Destroy(bones.gameObject);
     }
 }

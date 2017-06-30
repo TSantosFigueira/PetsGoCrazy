@@ -16,13 +16,13 @@ public class Bullet : MonoBehaviour {
     {
         if (Weapon.whoShot.Contains("Cat"))
             if (collision.gameObject.name.Contains("Dog")) { 
-                collision.gameObject.GetComponent<PlayerMovement>().Die();
+                collision.gameObject.GetComponent<PlayerMovement>().life -= 1;
                 Destroy(this.gameObject);
             } else{ Destroy(this.gameObject); }
 
         if (Weapon.whoShot.Contains("Dog"))
             if (collision.gameObject.name.Contains("Cat")) {
-                collision.gameObject.GetComponent<PlayerMovement>().Die();
+                collision.gameObject.GetComponent<PlayerMovement>().life -= 1;
                 Destroy(this.gameObject);
             } else{ Destroy(this.gameObject); }
 

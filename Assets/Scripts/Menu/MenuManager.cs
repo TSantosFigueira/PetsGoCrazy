@@ -23,4 +23,9 @@ public class MenuManager : MonoBehaviour {
                 selectedObject = eventSystem.currentSelectedGameObject;
         }
 	}
+
+    public void Sair()
+    {
+        Application.Quit();
+    }
 }
